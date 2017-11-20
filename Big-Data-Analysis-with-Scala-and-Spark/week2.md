@@ -9,7 +9,7 @@ Generally, reduction operaitons walk through a collection and combine neighborin
 **foldLeft `def foldLeft[B](z: B)(func: (B, A) => B): B`**
 
 1. Not parallelizable.
-2. **Exists in scala, but not in spark (since doing things serially is difficult)**.
+2. ***Exists in scala, but not in spark (since doing things serially is difficult).***
 
 
 
@@ -27,15 +27,15 @@ Generally, reduction operaitons walk through a collection and combine neighborin
 
 
 
-In fact, in Spark, *aggregate* is a more desirable reduction operator a majority of the time. Because much of the time when working with large-scale data, our goal is to **project down from larger/more complex data types**.
+In fact, in Spark, *aggregate* is a more desirable reduction operator a majority of the time. Because much of the time when working with large-scale data, our goal is to ***project down from larger/more complex data types.***
 
 
 
 ## Pair RDDs
 
-In short: Pair RDDs are **distributed key-value pairs**.
+In short: Pair RDDs are ***distributed key-value pairs***.
 
-Why? Because is it very common in world of big data processing to **operate on data in the form of key-value pairs (pattern from mapreduce)**.
+Why? Because is it very common in world of big data processing to ***operate on data in the form of key-value pairs (pattern from mapreduce).***
 
 Useful because: Pair RDDs allow you to act on each key in parallel or regroup data across the network.
 
@@ -73,7 +73,7 @@ Useful because: Pair RDDs allow you to act on each key in parallel or regroup da
 
 **countByKey `def countByKey(): Map[K, Long]`**
 
-1. **Action (important!)**
+1. ***Action (important!)***
 2. Counts the number of elements per key in a Pair RDD, returning a normal Scala Map mapping from keys to counts.
 
 
